@@ -1,0 +1,46 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.uv-cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# 数据和生成产物仅留本地
+data/
+artifacts/
+logs/
+
+# 本地教学、协作和历史执行记录不发布
+AGENTS.md
+examples/
+exercises/
+.agents/
+.codex/
+tests/test_mf_step.py
+tests/test_bpr_step_example.py
+
+# 只发布面向项目使用者的技术文档
+docs/*
+!docs/architecture.md
+!docs/data.md
+!docs/evaluation.md
+!docs/api.md
+!docs/reproduction.md
+
+# Local editors and OS files
+.DS_Store
+.idea/
+.vscode/
