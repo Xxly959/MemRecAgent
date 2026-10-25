@@ -1,0 +1,174 @@
+{
+  "synthetic": true,
+  "source": "saved_progressive_v1_model_responses",
+  "examples": [
+    {
+      "source_call": "J_progressive:T4",
+      "turns": [
+        {
+          "content": "今天下雨了，我刚刚才回家。",
+          "role": "user",
+          "turn_id": "T1"
+        },
+        {
+          "content": "对了，你怎么看荣耀手机？",
+          "role": "user",
+          "turn_id": "T2"
+        },
+        {
+          "content": "你是想了解它的特点，还是已经用过？",
+          "role": "assistant",
+          "turn_id": "AT2"
+        },
+        {
+          "content": "荣耀的系统我用着挺顺手，但还在了解。",
+          "role": "user",
+          "turn_id": "T3"
+        },
+        {
+          "content": "这次表达只适用于本次推荐，还是要长期修改之前的偏好？",
+          "role": "assistant",
+          "turn_id": "QT3"
+        },
+        {
+          "content": "我一直更喜欢荣耀手机，以后选手机也优先考虑它。",
+          "role": "user",
+          "turn_id": "T4"
+        }
+      ],
+      "response": "{\"schema_version\": 2, \"intents\": [\"express_preference\"], \"topics\": [{\"turn_id\": \"T2\", \"quote\": \"荣耀手机\"}, {\"turn_id\": \"T3\", \"quote\": \"荣耀的系统\"}, {\"turn_id\": \"T4\", \"quote\": \"荣耀手机\"}], \"clues\": [{\"subject\": {\"kind\": \"self\", \"references\": [{\"turn_id\": \"T3\", \"quote\": \"荣耀的系统我用着挺顺手\"}]}, \"category\": \"phone\", \"entity\": \"荣耀\", \"evidence\": [{\"turn_id\": \"T3\", \"quote\": \"荣耀的系统我用着挺顺手\"}]}], \"candidate\": {\"request\": {\"is_recommendation\": false, \"beneficiary\": {\"kind\": \"self\", \"references\": [{\"turn_id\": \"T4\", \"quote\": \"我一直更喜欢荣耀手机\"}]}, \"category\": \"phone\", \"requested_entity\": \"荣耀\", \"change_scope\": \"long_term\", \"evidence\": [{\"turn_id\": \"T4\", \"quote\": \"我一直更喜欢荣耀手机，以后选手机也优先考虑它。\"}]}, \"assertions\": [{\"subject\": {\"kind\": \"self\", \"references\": [{\"turn_id\": \"T4\", \"quote\": \"我一直更喜欢荣耀手机\"}]}, \"category\": \"phone\", \"entity\": \"荣耀\", \"relation\": \"prefer\", \"scope\": \"long_term\", \"evidence\": [{\"turn_id\": \"T4\", \"quote\": \"我一直更喜欢荣耀手机，以后选手机也优先考虑它。\"}]}], \"unresolved\": []}, \"confirmation\": {\"question_turn_id\": \"QT3\", \"outcome\": \"confirm\", \"subject\": \"self\", \"scope\": \"long_term\", \"person_reference\": null, \"evidence\": [{\"turn_id\": \"T4\", \"quote\": \"我一直更喜欢荣耀手机，以后选手机也优先考虑它。\"}]}}",
+      "expected_error": "interaction_latest"
+    },
+    {
+      "source_call": "K_actual_questions:R3",
+      "turns": [
+        {
+          "content": "三星和苹果的手机有什么区别？",
+          "role": "user",
+          "turn_id": "T1"
+        },
+        {
+          "content": "三星和苹果都可以进一步了解。你喜欢三星吗？要把它长期记住吗？",
+          "role": "assistant",
+          "turn_id": "AT1"
+        },
+        {
+          "content": "嗯，不过我还只是想了解，没有确定喜欢哪个。",
+          "role": "user",
+          "turn_id": "T2"
+        },
+        {
+          "content": "还有未明确的品牌或态度，请完整重述本次偏好。",
+          "role": "assistant",
+          "turn_id": "QT2"
+        },
+        {
+          "content": "我喜欢三星，不过只算这次还是以后也这样，我还没想好。",
+          "role": "user",
+          "turn_id": "T3"
+        },
+        {
+          "content": "这次表达只适用于本次推荐，还是要长期修改之前的偏好？",
+          "role": "assistant",
+          "turn_id": "QT3"
+        },
+        {
+          "content": "先只算这一次，不要长期保存。",
+          "role": "user",
+          "turn_id": "R3"
+        }
+      ],
+      "response": "{\"schema_version\": 2, \"intents\": [\"express_preference\"], \"topics\": [{\"turn_id\": \"R3\", \"quote\": \"先只算这一次\"}], \"clues\": [], \"candidate\": {\"request\": {\"is_recommendation\": false, \"beneficiary\": {\"kind\": \"self\", \"references\": [{\"turn_id\": \"R3\", \"quote\": \"先只算这一次\"}]}, \"category\": null, \"requested_entity\": null, \"change_scope\": \"request\", \"evidence\": [{\"turn_id\": \"R3\", \"quote\": \"先只算这一次\"}]}, \"assertions\": [{\"subject\": {\"kind\": \"self\", \"references\": [{\"turn_id\": \"R3\", \"quote\": \"先只算这一次\"}]}, \"category\": \"phone\", \"entity\": \"三星\", \"relation\": \"prefer\", \"scope\": \"current\", \"evidence\": [{\"turn_id\": \"R3\", \"quote\": \"先只算这一次\"}, {\"turn_id\": \"T3\", \"quote\": \"我喜欢三星\"}]}], \"unresolved\": []}, \"confirmation\": {\"question_turn_id\": \"QT3\", \"outcome\": \"confirm\", \"subject\": \"self\", \"scope\": \"current\", \"person_reference\": null, \"evidence\": [{\"turn_id\": \"R3\", \"quote\": \"先只算这一次，不要长期保存。\"}]}}",
+      "expected_error": "interaction_confirmation_mixed"
+    },
+    {
+      "source_call": "K_actual_questions:R5",
+      "turns": [
+        {
+          "content": "三星和苹果的手机有什么区别？",
+          "role": "user",
+          "turn_id": "T1"
+        },
+        {
+          "content": "三星和苹果都可以进一步了解。你喜欢三星吗？要把它长期记住吗？",
+          "role": "assistant",
+          "turn_id": "AT1"
+        },
+        {
+          "content": "嗯，不过我还只是想了解，没有确定喜欢哪个。",
+          "role": "user",
+          "turn_id": "T2"
+        },
+        {
+          "content": "还有未明确的品牌或态度，请完整重述本次偏好。",
+          "role": "assistant",
+          "turn_id": "QT2"
+        },
+        {
+          "content": "我喜欢三星，不过只算这次还是以后也这样，我还没想好。",
+          "role": "user",
+          "turn_id": "T3"
+        },
+        {
+          "content": "这次表达只适用于本次推荐，还是要长期修改之前的偏好？",
+          "role": "assistant",
+          "turn_id": "QT3"
+        },
+        {
+          "content": "先只算这一次，不要长期保存。",
+          "role": "user",
+          "turn_id": "R3"
+        },
+        {
+          "content": "对了，今天有什么运动建议？",
+          "role": "user",
+          "turn_id": "T4"
+        },
+        {
+          "content": "我更喜欢苹果，不过只算这次还是一直这样，我还没定。",
+          "role": "user",
+          "turn_id": "T5"
+        },
+        {
+          "content": "这次表达只适用于本次推荐，还是要长期修改之前的偏好？",
+          "role": "assistant",
+          "turn_id": "QT5"
+        },
+        {
+          "content": "这是我自己的长期偏好。",
+          "role": "user",
+          "turn_id": "R5"
+        }
+      ],
+      "response": "{\"schema_version\": 2, \"intents\": [\"express_preference\"], \"topics\": [{\"turn_id\": \"R5\", \"quote\": \"这是我自己的长期偏好。\"}], \"clues\": [], \"candidate\": {\"request\": {\"is_recommendation\": false, \"beneficiary\": {\"kind\": \"self\", \"references\": [{\"turn_id\": \"R5\", \"quote\": \"我自己的长期偏好\"}]}, \"category\": \"phone\", \"requested_entity\": null, \"change_scope\": \"long_term\", \"evidence\": [{\"turn_id\": \"R5\", \"quote\": \"这是我自己的长期偏好。\"}]}, \"assertions\": [{\"subject\": {\"kind\": \"self\", \"references\": [{\"turn_id\": \"R5\", \"quote\": \"我自己的长期偏好\"}]}, \"category\": \"phone\", \"entity\": \"苹果\", \"relation\": \"prefer\", \"scope\": \"long_term\", \"evidence\": [{\"turn_id\": \"T5\", \"quote\": \"我更喜欢苹果\"}, {\"turn_id\": \"R5\", \"quote\": \"这是我自己的长期偏好。\"}]}], \"unresolved\": []}, \"confirmation\": {\"question_turn_id\": \"QT5\", \"outcome\": \"confirm\", \"subject\": \"self\", \"scope\": \"long_term\", \"person_reference\": null, \"evidence\": [{\"turn_id\": \"R5\", \"quote\": \"这是我自己的长期偏好。\"}]}}",
+      "expected_error": "interaction_confirmation_mixed"
+    },
+    {
+      "source_call": "L_people_and_delete:T4",
+      "turns": [
+        {
+          "content": "我以后选手机都排除小米。",
+          "role": "user",
+          "turn_id": "T1"
+        },
+        {
+          "content": "我爸一直喜欢小米手机。",
+          "role": "user",
+          "turn_id": "T2"
+        },
+        {
+          "content": "小米这台手机发热有点明显，但我不是说整个品牌都差。",
+          "role": "user",
+          "turn_id": "T3"
+        },
+        {
+          "content": "这次给我爸推荐手机。",
+          "role": "user",
+          "turn_id": "T4"
+        }
+      ],
+      "response": "{\"schema_version\": 2, \"intents\": [\"recommend\"], \"topics\": [{\"turn_id\": \"T1\", \"quote\": \"小米\"}, {\"turn_id\": \"T2\", \"quote\": \"小米手机\"}, {\"turn_id\": \"T3\", \"quote\": \"小米这台手机\"}], \"clues\": [{\"subject\": {\"kind\": \"self\", \"references\": [{\"turn_id\": \"T1\", \"quote\": \"我以后选手机都排除小米\"}]}, \"category\": \"phone\", \"entity\": \"小米\", \"evidence\": [{\"turn_id\": \"T1\", \"quote\": \"我以后选手机都排除小米\"}]}, {\"subject\": {\"kind\": \"other\", \"references\": [{\"turn_id\": \"T2\", \"quote\": \"我爸\"}]}, \"category\": \"phone\", \"entity\": \"小米\", \"evidence\": [{\"turn_id\": \"T2\", \"quote\": \"我爸一直喜欢小米手机\"}]}, {\"subject\": {\"kind\": \"self\", \"references\": [{\"turn_id\": \"T3\", \"quote\": \"小米这台手机发热有点明显\"}]}, \"category\": \"phone\", \"entity\": \"小米\", \"evidence\": [{\"turn_id\": \"T3\", \"quote\": \"小米这台手机发热有点明显，但我不是说整个品牌都差\"}]}], \"candidate\": {\"request\": {\"is_recommendation\": true, \"beneficiary\": {\"kind\": \"other\", \"references\": [{\"turn_id\": \"T4\", \"quote\": \"我爸\"}]}, \"category\": \"phone\", \"requested_entity\": null, \"change_scope\": \"request\", \"evidence\": [{\"turn_id\": \"T4\", \"quote\": \"这次给我爸推荐手机\"}]}, \"assertions\": [], \"unresolved\": []}, \"confirmation\": null}",
+      "expected_error": "interaction_latest"
+    }
+  ]
+}

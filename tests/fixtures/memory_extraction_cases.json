@@ -1,0 +1,698 @@
+[
+  {
+    "case_id": "D1",
+    "group": "direct",
+    "synthetic": true,
+    "turns": [
+      "我一直喜欢三星手机"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "三星",
+          "relation": "prefer",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": [
+        "prefer"
+      ]
+    }
+  },
+  {
+    "case_id": "D2",
+    "group": "direct",
+    "synthetic": true,
+    "turns": [
+      "以后买手机别给我推荐小米"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "小米",
+          "relation": "exclude",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": [
+        "exclude"
+      ]
+    }
+  },
+  {
+    "case_id": "D3",
+    "group": "direct",
+    "synthetic": true,
+    "turns": [
+      "我讨厌苹果这个手机品牌"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "苹果",
+          "relation": "dislike",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": [
+        "dislike"
+      ]
+    }
+  },
+  {
+    "case_id": "D4",
+    "group": "direct",
+    "synthetic": true,
+    "turns": [
+      "三星手机有什么特点？"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "N1",
+    "group": "negation",
+    "synthetic": true,
+    "turns": [
+      "我不喜欢小米手机"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "小米",
+          "relation": "dislike",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": [
+        "dislike"
+      ]
+    }
+  },
+  {
+    "case_id": "N2",
+    "group": "negation",
+    "synthetic": true,
+    "turns": [
+      "并不是讨厌小米，我对这个品牌没有偏好"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "N3",
+    "group": "negation",
+    "synthetic": true,
+    "turns": [
+      "以后不排除小米了，也没有特别喜欢"
+    ],
+    "own_relation": "exclude",
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "小米",
+          "relation": "neutral",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": [
+        "neutral"
+      ]
+    }
+  },
+  {
+    "case_id": "N4",
+    "group": "negation",
+    "synthetic": true,
+    "turns": [
+      "我没说喜欢苹果，只是在问手机售后怎么办"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "O1",
+    "group": "other",
+    "synthetic": true,
+    "turns": [
+      "我爸一直喜欢小米手机，给他推荐一款"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "other",
+        "person": "T1:0:2",
+        "entity": null,
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [
+        {
+          "subject": "other",
+          "person": "T1:0:2",
+          "category": "phone",
+          "entity": "小米",
+          "relation": "prefer",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "O2",
+    "group": "other",
+    "synthetic": true,
+    "turns": [
+      "我爸喜欢小米，给我推荐手机"
+    ],
+    "own_relation": "exclude",
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "self",
+        "person": null,
+        "entity": null,
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [
+        {
+          "subject": "other",
+          "person": "T1:0:2",
+          "category": "phone",
+          "entity": "小米",
+          "relation": "prefer",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "O3",
+    "group": "other",
+    "synthetic": true,
+    "turns": [
+      "我讨厌小米，给我爸推荐手机"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "other",
+        "person": "T1:7:9",
+        "entity": null,
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "小米",
+          "relation": "dislike",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": [
+        "dislike"
+      ]
+    }
+  },
+  {
+    "case_id": "O4",
+    "group": "other",
+    "synthetic": true,
+    "turns": [
+      "我爸想买手机",
+      "他喜欢小米，给他推荐一款"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "other",
+        "person": "T1:0:2",
+        "entity": null,
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [
+        {
+          "subject": "other",
+          "person": "T1:0:2",
+          "category": "phone",
+          "entity": "小米",
+          "relation": "prefer",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "S1",
+    "group": "scope",
+    "synthetic": true,
+    "turns": [
+      "这次给我看看小米手机，只是比较一下"
+    ],
+    "own_relation": "exclude",
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "self",
+        "person": null,
+        "entity": "小米",
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "S2",
+    "group": "scope",
+    "synthetic": true,
+    "turns": [
+      "我以后喜欢小米手机了，长期偏好改成喜欢"
+    ],
+    "own_relation": "exclude",
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "小米",
+          "relation": "prefer",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": [
+        "prefer"
+      ]
+    }
+  },
+  {
+    "case_id": "S3",
+    "group": "scope",
+    "synthetic": true,
+    "turns": [
+      "给我看看小米吧，我好像喜欢它，但不确定要不要长期记住"
+    ],
+    "own_relation": "exclude",
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "self",
+        "person": null,
+        "entity": "小米",
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "小米",
+          "relation": "prefer",
+          "scope": "unclear"
+        }
+      ],
+      "decision": "clarify",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "S4",
+    "group": "scope",
+    "synthetic": true,
+    "turns": [
+      "这次给我推荐手机，但这次不要三星"
+    ],
+    "own_relation": {
+      "entity": "三星",
+      "relation": "prefer"
+    },
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "self",
+        "person": null,
+        "entity": null,
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "三星",
+          "relation": "exclude",
+          "scope": "current"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "A1",
+    "group": "ambiguous",
+    "synthetic": true,
+    "turns": [
+      "我和我爸都想换手机",
+      "喜欢小米，推荐一款"
+    ],
+    "own_relation": "exclude",
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "unknown",
+        "person": null,
+        "entity": null,
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [
+        {
+          "subject": "unknown",
+          "person": null,
+          "category": "phone",
+          "entity": "小米",
+          "relation": "prefer",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "clarify",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "A2",
+    "group": "ambiguous",
+    "synthetic": true,
+    "turns": [
+      "我和我爸都在挑手机",
+      "看看小米手机"
+    ],
+    "own_relation": {
+      "entity": "三星",
+      "relation": "prefer"
+    },
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "unknown",
+        "person": null,
+        "entity": "小米",
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "A3",
+    "group": "ambiguous",
+    "synthetic": true,
+    "turns": [
+      "我爸和我哥都在挑手机",
+      "他喜欢小米，推荐一款"
+    ],
+    "own_relation": "exclude",
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "unknown",
+        "person": null,
+        "entity": null,
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [
+        {
+          "subject": "unknown",
+          "person": null,
+          "category": "phone",
+          "entity": "小米",
+          "relation": "prefer",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "clarify",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "A4",
+    "group": "ambiguous",
+    "synthetic": true,
+    "turns": [
+      "我对小米改观了，但这只是本次还是以后都喜欢我还没想好"
+    ],
+    "own_relation": "exclude",
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [
+        {
+          "subject": "self",
+          "person": null,
+          "category": "phone",
+          "entity": "小米",
+          "relation": "prefer",
+          "scope": "unclear"
+        }
+      ],
+      "decision": "clarify",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "B1",
+    "group": "boundary",
+    "synthetic": true,
+    "turns": [
+      "我买过小米手机"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "B2",
+    "group": "boundary",
+    "synthetic": true,
+    "turns": [
+      "我这台小米手机用起来卡，这只是这台的情况"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "B3",
+    "group": "boundary",
+    "synthetic": true,
+    "turns": [
+      "朋友说他一直喜欢小米手机，帮他推荐一款"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": true,
+        "beneficiary": "other",
+        "person": "T1:0:2",
+        "entity": null,
+        "category": "phone",
+        "change_scope": "request"
+      },
+      "assertions": [
+        {
+          "subject": "other",
+          "person": "T1:0:2",
+          "category": "phone",
+          "entity": "小米",
+          "relation": "prefer",
+          "scope": "long_term"
+        }
+      ],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  },
+  {
+    "case_id": "B4",
+    "group": "boundary",
+    "synthetic": true,
+    "turns": [
+      "比较一下苹果和三星手机的续航，不代表我喜欢哪个"
+    ],
+    "own_relation": null,
+    "expected": {
+      "request": {
+        "is_recommendation": false,
+        "beneficiary": null,
+        "person": null,
+        "entity": null,
+        "category": null,
+        "change_scope": null
+      },
+      "assertions": [],
+      "decision": "ready",
+      "proposed_relations": []
+    }
+  }
+]

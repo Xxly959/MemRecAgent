@@ -1,0 +1,1012 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "reference_source": "assistant_authored_from_approved_rules",
+  "episodes": [
+    {
+      "episode_id": "G_background_v3",
+      "max_memory_age_days": null,
+      "steps": [
+        {
+          "turn_id": "T1",
+          "offset_seconds": 60,
+          "text": "以后给我推荐手机都排除小米，请长期记住。",
+          "expected": {
+            "actions": [
+              "apply"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "excluded": [
+              "小米"
+            ],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": [
+                {
+                  "subject": "self",
+                  "person": null,
+                  "category": "phone",
+                  "entity": "小米",
+                  "relation": "exclude",
+                  "scope": "long_term"
+                }
+              ]
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T2",
+          "offset_seconds": 120,
+          "text": "我爸和我朋友都打算换手机，谁喜欢什么我还没问。",
+          "expected": {
+            "actions": [
+              "noop",
+              "current"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": null,
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": []
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T3",
+          "offset_seconds": 180,
+          "text": "有人提过三星，先记在聊天里，我没有表达喜好。",
+          "expected": {
+            "actions": [
+              "noop",
+              "current"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": null,
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": []
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T4",
+          "offset_seconds": 240,
+          "text": "这次给我看小米手机。",
+          "expected": {
+            "actions": [
+              "current"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": true,
+                "beneficiary": "self",
+                "person": null,
+                "category": "phone",
+                "requested_entity": "小米",
+                "change_scope": "request"
+              },
+              "assertions": []
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T5",
+          "offset_seconds": 300,
+          "text": "我爸很喜欢小米，这次替我爸看看手机。",
+          "expected": {
+            "actions": [
+              "current"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": "other",
+            "person": "我爸",
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": true,
+                "beneficiary": "other",
+                "person": "我爸",
+                "category": "phone",
+                "requested_entity": null,
+                "change_scope": "request"
+              },
+              "assertions": [
+                {
+                  "subject": "other",
+                  "person": "我爸",
+                  "category": "phone",
+                  "entity": "小米",
+                  "relation": "prefer",
+                  "scope": "long_term"
+                }
+              ]
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T6",
+          "offset_seconds": 360,
+          "text": "给我推荐手机。",
+          "expected": {
+            "actions": [
+              "noop",
+              "current"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "excluded": [
+              "小米"
+            ],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": true,
+                "beneficiary": "self",
+                "person": null,
+                "category": "phone",
+                "requested_entity": null,
+                "change_scope": "request"
+              },
+              "assertions": []
+            }
+          },
+          "reply": null,
+          "reset_session": true,
+          "delete_entity": null,
+          "restart": false
+        }
+      ]
+    },
+    {
+      "episode_id": "H_real_ambiguity_v3",
+      "max_memory_age_days": null,
+      "steps": [
+        {
+          "turn_id": "T1",
+          "offset_seconds": 60,
+          "text": "以后我长期排除三星手机。",
+          "expected": {
+            "actions": [
+              "apply"
+            ],
+            "heads": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "excluded": [
+              "三星"
+            ],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": [
+                {
+                  "subject": "self",
+                  "person": null,
+                  "category": "phone",
+                  "entity": "三星",
+                  "relation": "exclude",
+                  "scope": "long_term"
+                }
+              ]
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T2",
+          "offset_seconds": 120,
+          "text": "妹妹和同学在换手机，尚未说品牌倾向。",
+          "expected": {
+            "actions": [
+              "noop",
+              "current"
+            ],
+            "heads": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": null,
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": []
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T3",
+          "offset_seconds": 180,
+          "text": "他喜欢三星，给他挑手机。",
+          "expected": {
+            "actions": [
+              "clarify"
+            ],
+            "heads": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": null,
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": true,
+                "beneficiary": "unknown",
+                "person": null,
+                "category": "phone",
+                "requested_entity": null,
+                "change_scope": "request"
+              },
+              "assertions": [
+                {
+                  "subject": "unknown",
+                  "person": null,
+                  "category": "phone",
+                  "entity": "三星",
+                  "relation": "prefer",
+                  "scope": "long_term"
+                }
+              ]
+            }
+          },
+          "reply": {
+            "turn_id": "R3",
+            "offset_seconds": 190,
+            "text": "是我同学，这次替我同学选。",
+            "expected": {
+              "actions": [
+                "current"
+              ],
+              "heads": [
+                [
+                  "phone",
+                  "三星",
+                  "exclude"
+                ]
+              ],
+              "active": [
+                [
+                  "phone",
+                  "三星",
+                  "exclude"
+                ]
+              ],
+              "excluded": [],
+              "beneficiary": "other",
+              "person": "我同学",
+              "allowed_writes": [],
+              "semantic": {
+                "request": {
+                  "is_recommendation": false
+                },
+                "assertions": []
+              }
+            },
+            "confirmation": {
+              "outcome": "confirm",
+              "subject": "other",
+              "scope": "current",
+              "person": "我同学"
+            }
+          },
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T4",
+          "offset_seconds": 240,
+          "text": "我喜欢三星，暂时没定是只限这回还是今后一直如此。",
+          "expected": {
+            "actions": [
+              "clarify"
+            ],
+            "heads": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": [
+                {
+                  "subject": "self",
+                  "person": null,
+                  "category": "phone",
+                  "entity": "三星",
+                  "relation": "prefer",
+                  "scope": "unclear"
+                }
+              ]
+            }
+          },
+          "reply": {
+            "turn_id": "R4",
+            "offset_seconds": 250,
+            "text": "只限这次我自己，长期排除不变。",
+            "expected": {
+              "actions": [
+                "current"
+              ],
+              "heads": [
+                [
+                  "phone",
+                  "三星",
+                  "exclude"
+                ]
+              ],
+              "active": [
+                [
+                  "phone",
+                  "三星",
+                  "exclude"
+                ]
+              ],
+              "excluded": [],
+              "beneficiary": "self",
+              "person": null,
+              "allowed_writes": [],
+              "semantic": {
+                "request": {
+                  "is_recommendation": false
+                },
+                "assertions": []
+              }
+            },
+            "confirmation": {
+              "outcome": "confirm",
+              "subject": "self",
+              "scope": "current",
+              "person": null
+            }
+          },
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T5",
+          "offset_seconds": 300,
+          "text": "准备换手机的人不少，我还没提出推荐要求。",
+          "expected": {
+            "actions": [
+              "noop",
+              "current"
+            ],
+            "heads": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": null,
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": []
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T6",
+          "offset_seconds": 360,
+          "text": "给我推荐手机。",
+          "expected": {
+            "actions": [
+              "noop",
+              "current"
+            ],
+            "heads": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "excluded": [
+              "三星"
+            ],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": true,
+                "beneficiary": "self",
+                "person": null,
+                "category": "phone",
+                "requested_entity": null,
+                "change_scope": "request"
+              },
+              "assertions": []
+            }
+          },
+          "reply": null,
+          "reset_session": true,
+          "delete_entity": null,
+          "restart": false
+        }
+      ]
+    },
+    {
+      "episode_id": "I_incomplete_v3",
+      "max_memory_age_days": null,
+      "steps": [
+        {
+          "turn_id": "T1",
+          "offset_seconds": 60,
+          "text": "以后我长期排除苹果手机。",
+          "expected": {
+            "actions": [
+              "apply"
+            ],
+            "heads": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ]
+            ],
+            "excluded": [
+              "苹果"
+            ],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ]
+            ],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": [
+                {
+                  "subject": "self",
+                  "person": null,
+                  "category": "phone",
+                  "entity": "苹果",
+                  "relation": "exclude",
+                  "scope": "long_term"
+                }
+              ]
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T2",
+          "offset_seconds": 120,
+          "text": "我以后喜欢那个品牌，名字还没说。",
+          "expected": {
+            "actions": [
+              "clarify"
+            ],
+            "heads": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": null,
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": []
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T3",
+          "offset_seconds": 180,
+          "text": "补全刚才的话：我以后长期喜欢三星手机。",
+          "expected": {
+            "actions": [
+              "apply"
+            ],
+            "heads": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ],
+              [
+                "phone",
+                "三星",
+                "prefer"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ],
+              [
+                "phone",
+                "三星",
+                "prefer"
+              ]
+            ],
+            "excluded": [
+              "苹果"
+            ],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [
+              [
+                "phone",
+                "三星",
+                "prefer"
+              ]
+            ],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": [
+                {
+                  "subject": "self",
+                  "person": null,
+                  "category": "phone",
+                  "entity": "三星",
+                  "relation": "prefer",
+                  "scope": "long_term"
+                }
+              ]
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T4",
+          "offset_seconds": 240,
+          "text": "我爸最近在看手机，但没有让我替他挑。",
+          "expected": {
+            "actions": [
+              "noop",
+              "current"
+            ],
+            "heads": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ],
+              [
+                "phone",
+                "三星",
+                "prefer"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ],
+              [
+                "phone",
+                "三星",
+                "prefer"
+              ]
+            ],
+            "excluded": [],
+            "beneficiary": null,
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": []
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T5",
+          "offset_seconds": 300,
+          "text": "以后我排除小米，另外那个品牌也别推荐。",
+          "expected": {
+            "actions": [
+              "clarify"
+            ],
+            "heads": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ],
+              [
+                "phone",
+                "三星",
+                "prefer"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ],
+              [
+                "phone",
+                "三星",
+                "prefer"
+              ]
+            ],
+            "excluded": [
+              "小米",
+              "苹果"
+            ],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": [
+                {
+                  "subject": "self",
+                  "person": null,
+                  "category": "phone",
+                  "entity": "小米",
+                  "relation": "exclude",
+                  "scope": "long_term"
+                }
+              ]
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        },
+        {
+          "turn_id": "T6",
+          "offset_seconds": 360,
+          "text": "把刚才的话说完整：以后我长期排除小米和三星手机。",
+          "expected": {
+            "actions": [
+              "apply"
+            ],
+            "heads": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ],
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ],
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "active": [
+              [
+                "phone",
+                "苹果",
+                "exclude"
+              ],
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ],
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "excluded": [
+              "苹果",
+              "小米",
+              "三星"
+            ],
+            "beneficiary": "self",
+            "person": null,
+            "allowed_writes": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ],
+              [
+                "phone",
+                "三星",
+                "exclude"
+              ]
+            ],
+            "semantic": {
+              "request": {
+                "is_recommendation": false
+              },
+              "assertions": [
+                {
+                  "subject": "self",
+                  "person": null,
+                  "category": "phone",
+                  "entity": "小米",
+                  "relation": "exclude",
+                  "scope": "long_term"
+                },
+                {
+                  "subject": "self",
+                  "person": null,
+                  "category": "phone",
+                  "entity": "三星",
+                  "relation": "exclude",
+                  "scope": "long_term"
+                }
+              ]
+            }
+          },
+          "reply": null,
+          "reset_session": false,
+          "delete_entity": null,
+          "restart": false
+        }
+      ]
+    }
+  ]
+}

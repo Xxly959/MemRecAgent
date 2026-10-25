@@ -1,0 +1,860 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "reference_source": "assistant_authored_from_approved_rules",
+  "episodes": [
+    {
+      "episode_id": "J_progressive",
+      "steps": [
+        {
+          "turn_id": "T1",
+          "offset_seconds": 60,
+          "text": "今天下雨了，我刚刚才回家。",
+          "expected": {
+            "intents": [
+              "unrelated"
+            ],
+            "topics": [],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "continue"
+            ],
+            "heads": [],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T2",
+          "offset_seconds": 120,
+          "text": "对了，你怎么看荣耀手机？",
+          "expected": {
+            "intents": [
+              "consult"
+            ],
+            "topics": [
+              "荣耀"
+            ],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "answer"
+            ],
+            "heads": [],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": {
+            "on_action": "answer",
+            "text": "你是想了解它的特点，还是已经用过？",
+            "source": "scripted_assistant_context"
+          },
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T3",
+          "offset_seconds": 180,
+          "text": "荣耀的系统我用着挺顺手，但还在了解。",
+          "expected": {
+            "intents": [
+              "consult"
+            ],
+            "topics": [
+              "荣耀"
+            ],
+            "assertions": [],
+            "clues": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "荣耀"
+              }
+            ],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "answer"
+            ],
+            "heads": [],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "荣耀"
+              }
+            ]
+          },
+          "assistant": {
+            "on_action": "answer",
+            "text": "这是一条具体使用体验。你平时更偏向什么手机？",
+            "source": "scripted_assistant_context"
+          },
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T4",
+          "offset_seconds": 240,
+          "text": "我一直更喜欢荣耀手机，以后选手机也优先考虑它。",
+          "expected": {
+            "intents": [
+              "express_preference"
+            ],
+            "topics": [
+              "荣耀"
+            ],
+            "assertions": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "荣耀",
+                "relation": "prefer",
+                "scope": "long_term"
+              }
+            ],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "answer"
+            ],
+            "heads": [
+              [
+                "phone",
+                "荣耀",
+                "prefer"
+              ]
+            ],
+            "context": [],
+            "context_people": [],
+            "writes": [
+              [
+                "phone",
+                "荣耀",
+                "prefer"
+              ]
+            ],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T5",
+          "offset_seconds": 300,
+          "text": "今晚煮面还是吃米饭好？",
+          "expected": {
+            "intents": [
+              "unrelated"
+            ],
+            "topics": [],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "continue"
+            ],
+            "heads": [
+              [
+                "phone",
+                "荣耀",
+                "prefer"
+              ]
+            ],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T6",
+          "offset_seconds": 360,
+          "text": "现在给我推荐手机吧。",
+          "expected": {
+            "intents": [
+              "recommend"
+            ],
+            "topics": [],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": true,
+              "beneficiary": "self",
+              "person": null,
+              "category": "phone",
+              "requested_entity": null,
+              "change_scope": "request"
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "recommend"
+            ],
+            "heads": [
+              [
+                "phone",
+                "荣耀",
+                "prefer"
+              ]
+            ],
+            "context": [
+              [
+                "phone",
+                "荣耀",
+                "prefer"
+              ]
+            ],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        }
+      ]
+    },
+    {
+      "episode_id": "K_actual_questions",
+      "steps": [
+        {
+          "turn_id": "T1",
+          "offset_seconds": 60,
+          "text": "三星和苹果的手机有什么区别？",
+          "expected": {
+            "intents": [
+              "compare"
+            ],
+            "topics": [
+              "三星",
+              "苹果"
+            ],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "compare"
+            ],
+            "heads": [],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": {
+            "on_action": "compare",
+            "text": "三星和苹果都可以进一步了解。你喜欢三星吗？要把它长期记住吗？",
+            "source": "scripted_assistant_context"
+          },
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T2",
+          "offset_seconds": 120,
+          "text": "嗯，不过我还只是想了解，没有确定喜欢哪个。",
+          "expected": {
+            "intents": [
+              "consult"
+            ],
+            "topics": [],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "answer"
+            ],
+            "heads": [],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T3",
+          "offset_seconds": 180,
+          "text": "我喜欢三星，不过只算这次还是以后也这样，我还没想好。",
+          "expected": {
+            "intents": [
+              "express_preference"
+            ],
+            "topics": [
+              "三星"
+            ],
+            "assertions": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "三星",
+                "relation": "prefer",
+                "scope": "unclear"
+              }
+            ],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "clarify"
+            ],
+            "heads": [],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": {
+            "turn_id": "R3",
+            "offset_seconds": 190,
+            "text": "先只算这一次，不要长期保存。",
+            "question_kind": "single_scope",
+            "expected": {
+              "intents": [
+                "consult"
+              ],
+              "topics": [],
+              "assertions": [],
+              "clues": [],
+              "request": {
+                "is_recommendation": false
+              },
+              "unresolved": [],
+              "confirmation": {
+                "outcome": "confirm",
+                "subject": "self",
+                "scope": "current",
+                "person": null
+              },
+              "actions": [
+                "answer"
+              ],
+              "heads": [],
+              "context": [],
+              "context_people": [],
+              "writes": [],
+              "working_clues": []
+            }
+          },
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T4",
+          "offset_seconds": 240,
+          "text": "对了，今天有什么运动建议？",
+          "expected": {
+            "intents": [
+              "unrelated"
+            ],
+            "topics": [],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "continue"
+            ],
+            "heads": [],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T5",
+          "offset_seconds": 300,
+          "text": "我更喜欢苹果，不过只算这次还是一直这样，我还没定。",
+          "expected": {
+            "intents": [
+              "express_preference"
+            ],
+            "topics": [
+              "苹果"
+            ],
+            "assertions": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "苹果",
+                "relation": "prefer",
+                "scope": "unclear"
+              }
+            ],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "clarify"
+            ],
+            "heads": [],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": {
+            "turn_id": "R5",
+            "offset_seconds": 310,
+            "text": "这是我自己的长期偏好。",
+            "question_kind": "single_scope",
+            "expected": {
+              "intents": [
+                "consult"
+              ],
+              "topics": [],
+              "assertions": [],
+              "clues": [],
+              "request": {
+                "is_recommendation": false
+              },
+              "unresolved": [],
+              "confirmation": {
+                "outcome": "confirm",
+                "subject": "self",
+                "scope": "long_term",
+                "person": null
+              },
+              "actions": [
+                "answer"
+              ],
+              "heads": [
+                [
+                  "phone",
+                  "苹果",
+                  "prefer"
+                ]
+              ],
+              "context": [],
+              "context_people": [],
+              "writes": [
+                [
+                  "phone",
+                  "苹果",
+                  "prefer"
+                ]
+              ],
+              "working_clues": []
+            }
+          },
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T6",
+          "offset_seconds": 360,
+          "text": "取消我对苹果的品牌偏好，以后不再按喜欢这个品牌处理。",
+          "expected": {
+            "intents": [
+              "express_preference"
+            ],
+            "topics": [
+              "苹果"
+            ],
+            "assertions": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "苹果",
+                "relation": "neutral",
+                "scope": "long_term"
+              }
+            ],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "answer"
+            ],
+            "heads": [
+              [
+                "phone",
+                "苹果",
+                "neutral"
+              ]
+            ],
+            "context": [],
+            "context_people": [],
+            "writes": [
+              [
+                "phone",
+                "苹果",
+                "neutral"
+              ]
+            ],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        }
+      ]
+    },
+    {
+      "episode_id": "L_people_and_delete",
+      "steps": [
+        {
+          "turn_id": "T1",
+          "offset_seconds": 60,
+          "text": "我以后选手机都排除小米。",
+          "expected": {
+            "intents": [
+              "express_preference"
+            ],
+            "topics": [
+              "小米"
+            ],
+            "assertions": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "小米",
+                "relation": "exclude",
+                "scope": "long_term"
+              }
+            ],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "answer"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "context": [],
+            "context_people": [],
+            "writes": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T2",
+          "offset_seconds": 120,
+          "text": "我爸一直喜欢小米手机。",
+          "expected": {
+            "intents": [
+              "express_preference"
+            ],
+            "topics": [
+              "小米"
+            ],
+            "assertions": [
+              {
+                "subject": "other",
+                "person": "我爸",
+                "category": "phone",
+                "entity": "小米",
+                "relation": "prefer",
+                "scope": "long_term"
+              }
+            ],
+            "clues": [],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "answer"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T3",
+          "offset_seconds": 180,
+          "text": "小米这台手机发热有点明显，但我不是说整个品牌都差。",
+          "expected": {
+            "intents": [
+              "consult"
+            ],
+            "topics": [
+              "小米"
+            ],
+            "assertions": [],
+            "clues": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "小米"
+              }
+            ],
+            "request": {
+              "is_recommendation": false
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "answer"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "context": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "context_people": [],
+            "writes": [],
+            "working_clues": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "小米"
+              }
+            ]
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T4",
+          "offset_seconds": 240,
+          "text": "这次给我爸推荐手机。",
+          "expected": {
+            "intents": [
+              "recommend"
+            ],
+            "topics": [],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": true,
+              "beneficiary": "other",
+              "person": "我爸",
+              "category": "phone",
+              "requested_entity": null,
+              "change_scope": "request"
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "recommend"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "context": [],
+            "context_people": [
+              [
+                "我爸",
+                "phone",
+                "小米",
+                "prefer"
+              ]
+            ],
+            "writes": [],
+            "working_clues": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "小米"
+              }
+            ]
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T5",
+          "offset_seconds": 300,
+          "text": "这次只给我推荐小米手机。",
+          "expected": {
+            "intents": [
+              "recommend"
+            ],
+            "topics": [
+              "小米"
+            ],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": true,
+              "beneficiary": "self",
+              "person": null,
+              "category": "phone",
+              "requested_entity": "小米",
+              "change_scope": "request"
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "recommend"
+            ],
+            "heads": [
+              [
+                "phone",
+                "小米",
+                "exclude"
+              ]
+            ],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": [
+              {
+                "subject": "self",
+                "person": null,
+                "category": "phone",
+                "entity": "小米"
+              }
+            ]
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": null
+        },
+        {
+          "turn_id": "T6",
+          "offset_seconds": 360,
+          "text": "给我推荐手机。",
+          "expected": {
+            "intents": [
+              "recommend"
+            ],
+            "topics": [],
+            "assertions": [],
+            "clues": [],
+            "request": {
+              "is_recommendation": true,
+              "beneficiary": "self",
+              "person": null,
+              "category": "phone",
+              "requested_entity": null,
+              "change_scope": "request"
+            },
+            "unresolved": [],
+            "confirmation": null,
+            "actions": [
+              "recommend"
+            ],
+            "heads": [],
+            "context": [],
+            "context_people": [],
+            "writes": [],
+            "working_clues": []
+          },
+          "assistant": null,
+          "reply": null,
+          "delete_entity": "小米"
+        }
+      ]
+    }
+  ]
+}

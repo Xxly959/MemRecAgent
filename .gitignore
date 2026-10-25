@@ -5,6 +5,7 @@ __pycache__/
 .venv/
 .uv-cache/
 .pytest_cache/
+.tmp_pytest/
 .ruff_cache/
 .coverage
 htmlcov/
@@ -27,8 +28,11 @@ logs/
 AGENTS.md
 examples/
 exercises/
+lessons/
 .agents/
 .codex/
+.superpowers/
+.workbuddy/
 tests/test_mf_step.py
 tests/test_bpr_step_example.py
 
@@ -39,8 +43,18 @@ docs/*
 !docs/evaluation.md
 !docs/api.md
 !docs/reproduction.md
+!docs/STATUS.md
+!docs/reports/
+docs/reports/*
+!docs/reports/*.md
 
 # Local editors and OS files
 .DS_Store
 .idea/
 .vscode/
+
+# Pi宿主的本机依赖与编译产物
+agent/node_modules/
+agent/dist/
+# 外部合成测试集生成源码属于数据输入，原样保留本地，不发布为产品代码
+/scripts/eval_gen/

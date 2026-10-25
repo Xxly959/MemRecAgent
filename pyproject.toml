@@ -34,6 +34,9 @@ dev = [
 [tool.hatch.build.targets.wheel]
 packages = ["src/memrecagent"]
 
+[tool.hatch.build.targets.sdist]
+exclude = ["/.tmp_pytest", "/.tmp_pytest/**"]
+
 [tool.ruff]
 target-version = "py312"
 line-length = 100
